@@ -1889,4 +1889,42 @@ input[type="button"]:disabled,input[type="submit"]:disabled{
   font-size: 11px !important;
 }
 
+.tabs{
+  display:none;
+}
+
+.tabs.active{
+  display:block;
+}
+div.new_item{
+  padding:7px 13px;
+  margin: 0 5px 0 0;
+  border:none;
+  background:#818181;
+  background:-moz-linear-gradient(top,#818181 0%,#646464 100%);
+  background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,#646464),color-stop(100%,#646464));
+  background:-webkit-linear-gradient(top,#818181 0%,#646464 100%);
+  background:-o-linear-gradient(top,#818181 0%,#646464 100%);
+  background:-ms-linear-gradient(top,#818181 0%,#646464 100%);
+  background:linear-gradient(top,#818181 0%,#646464 100%);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#818181',endColorstr='#646464',GradientType=0);
+  -moz-box-shadow:0 1px 5px #444444;
+  -webkit-box-shadow:0 1px 5px #444444;
+  box-shadow:0 1px 5px #444444;
+  color:#ffffff;
+  font-size:13px;
+  font-weight:normal;
+  cursor:pointer;
+  -moz-border-radius:2px;
+  border-radius:2px;
+  -webkit-border-radius:2px;
+  background-clip:padding-box;
+  -moz-user-select:none;
+  -webkit-user-select:none;
+  user-select:none;
+  text-shadow:none;
+  position:absolute;
+  top:8px;
+  right:9px;
+}
 /* This beautiful CSS-File has been crafted with LESS (lesscss.org) and compiled by simpLESS (wearekiss.com/simpless) */
