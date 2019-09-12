@@ -479,7 +479,7 @@ class AdminController extends Controller {
 		if ($response = $this->session->get('administrator_download_response'))
 		{
 			$this->session->forget('administrator_download_response');
-			$filename = substr($response['headers']['content-disposition'][0], 22, -1);
+			$filename = substr($response['headers']['content-disposition'][0], 21);
 
 			return response()->download($response['file'], $filename, $response['headers']);
 		}
