@@ -21,6 +21,7 @@ use Frozennode\Administrator\Fields\Time;
 use Frozennode\Administrator\Fields\Password;
 use Frozennode\Administrator\Fields\Text;
 use Frozennode\Administrator\Fields\Key;
+use Frozennode\Administrator\Fields\Tab;
 
 class Factory {
 
@@ -45,7 +46,8 @@ class Factory {
 		'image' => Image::class,
 		'file' => File::class,
 		'color' => Color::class,
-
+		'tab' => Tab::class,
+		
 		//relationships
 		'belongs_to' => BelongsTo::class,
 		'belongs_to_many' => BelongsToMany::class,
