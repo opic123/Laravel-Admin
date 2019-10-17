@@ -6,11 +6,11 @@
 </div>
 
 <script type="text/javascript">
-	var site_url = "<?php echo url('/') ?>",
+	var site_url = "<?php echo url() ?>",
 		base_url = "<?php echo $baseUrl ?>/",
 		asset_url = "<?php echo $assetUrl ?>",
-		file_url = "<?php echo route('admin_display_file', array($config->getOption('name')), false) ?>",
-		rows_per_page_url = "<?php echo route('admin_rows_per_page', array($config->getOption('name')), false) ?>",
+		file_url = "<?php echo route('admin_display_file', array($config->getOption('name'))) ?>",
+		rows_per_page_url = "<?php echo route('admin_rows_per_page', array($config->getOption('name'))) ?>",
 		route = "<?php echo $route ?>",
 		csrf = "<?php echo csrf_token() ?>",
 		language = "<?php echo config('app.locale') ?>",
@@ -38,7 +38,7 @@
 </script>
 
 <style type="text/css">
-@media screen and (min-width: 530px){
+
 	div.item_edit form.edit_form select, div.item_edit form.edit_form input[type=hidden], div.item_edit form.edit_form .select2-container {
 		width: <?php echo $formWidth - 59 ?>px !important;
 	}
@@ -48,12 +48,12 @@
 	}
 
 	div.item_edit form.edit_form div.markdown textarea {
-		width: <?php echo (int)(($formWidth - 75) / 2) - 12 ?>px !important;
-		max-width: <?php echo (int)(($formWidth - 75) / 2) - 12 ?>px !important;
+		width: <?php echo intval(($formWidth - 75) / 2) - 12 ?>px !important;
+		max-width: <?php echo intval(($formWidth - 75) / 2) - 12 ?>px !important;
 	}
 
 	div.item_edit form.edit_form div.markdown div.preview {
-		width: <?php echo (int)(($formWidth - 75) / 2) ?>px !important;
+		width: <?php echo intval(($formWidth - 75) / 2) ?>px !important;
 	}
 
 	div.item_edit form.edit_form input[type="text"], div.item_edit form.edit_form input[type="password"], div.item_edit form.edit_form textarea {
@@ -64,7 +64,6 @@
 	div.item_edit form.edit_form > div.image img, div.item_edit form.edit_form > div.image div.image_container {
 		max-width: <?php echo $formWidth - 65 ?>px;
 	}
-}
 
 </style>
 
