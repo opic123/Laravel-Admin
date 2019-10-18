@@ -255,7 +255,9 @@ class AdminController extends Controller {
 				$headers = $result->headers->all();
 				$this->session->put('administrator_download_response', array('file' => $file, 'headers' => $headers));
 
-				$response['download'] = route('admin_file_download', array(), false);
+				//$response['download'] = route('admin_file_download', array(), false);
+				//fix absolute url path peerless.com/tire-chain-finder
+				$response['download'] = route('admin_file_download');
 			}
 			//if it's a redirect, put the url into the redirect key so that javascript can transfer the user
 			else if (is_a($result, RedirectResponse::class))
@@ -322,7 +324,9 @@ class AdminController extends Controller {
 				$headers = $result->headers->all();
 				$this->session->put('administrator_download_response', array('file' => $file, 'headers' => $headers));
 
-				$response['download'] = route('admin_file_download', array(), false);
+				//$response['download'] = route('admin_file_download', array(), false);
+				//fix absolute url path peerless.com/tire-chain-finder
+				$response['download'] = route('admin_file_download');
 			}
 			//if it's a redirect, put the url into the redirect key so that javascript can transfer the user
 			else if (is_a($result, RedirectResponse::class))
@@ -612,7 +616,9 @@ class AdminController extends Controller {
 				$headers = $result->headers->all();
 				$this->session->put('administrator_download_response', array('file' => $file, 'headers' => $headers));
 
-				$response['download'] = route('admin_file_download', array(), false);
+				//$response['download'] = route('admin_file_download', array(), false);
+				//fix absolute url path peerless.com/tire-chain-finder
+				$response['download'] = route('admin_file_download');
 			}
 			//if it's a redirect, put the url into the redirect key so that javascript can transfer the user
 			else if (is_a($result, RedirectResponse::class))
